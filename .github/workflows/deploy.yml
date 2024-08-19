@@ -26,7 +26,7 @@ jobs:
       - name: Deploy with CodeDeploy
         run: |
           aws deploy create-deployment \
-            --application-name CodeDeployApplication \
+            --application-name MyCodeDeployApp \
             --deployment-config-name CodeDeployDefault.OneAtATime \
             --deployment-group-name CodeDeployDemoFleet \
             --s3-location bucket=dev-codedeploy-bucket-ajkgr8mu,bundleType=zip,key=myapp.zip
