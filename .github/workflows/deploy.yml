@@ -29,7 +29,7 @@ jobs:
             --application-name CodeDeployApplication \
             --deployment-config-name CodeDeployDefault.OneAtATime \
             --deployment-group-name CodeDeployDemoFleet \
-            --s3-location bucket=your-s3-bucket,bundleType=zip,key=myapp.zip
+            --s3-location bucket=dev-codedeploy-bucket-ajkgr8mu,bundleType=zip,key=myapp.zip
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
