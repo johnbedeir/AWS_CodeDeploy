@@ -17,7 +17,7 @@ jobs:
         run: zip -r myapp.zip .
 
       - name: Upload to S3
-        run: aws s3 cp myapp.zip s3://${{ secrets.AWS_BUCKET }}/myapp.zip
+        run: aws s3 cp myapp.zip s3://dev-codedeploy-bucket-ajkgr8mu/myapp.zip
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
