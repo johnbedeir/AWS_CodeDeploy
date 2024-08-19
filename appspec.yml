@@ -1,0 +1,14 @@
+version: 0.0
+os: linux
+files:
+  - source: /myapp
+    destination: /home/ubuntu/myapp
+hooks:
+  AfterInstall:
+    - location: scripts/install_dependencies.sh
+      timeout: 300
+      runas: ubuntu
+  ApplicationStart:
+    - location: scripts/start_application.sh
+      timeout: 300
+      runas: ubuntu
